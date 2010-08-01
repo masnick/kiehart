@@ -1,31 +1,38 @@
 ﻿; (function($) {
 	/**
-	* Resizes an inner element's font so that the inner element completely fills the outer element.
-	* @author Russ Painter WebDesign@GeekyMonkey.com
-	* @version 0.1
-	* @param {Object} Options which are maxFontPixels (default=40), innerTag (default='span')
-	* @return All outer elements processed
-	* @example <div class='mybigdiv filltext'><span>My Text To Resize</span></div>
+	* Based on textfill jquery plugin by Russ Painter (WebDesign@GeekyMonkey.com)
 	*/
 	$.fn.textfill = function(options) {
 		var defaults = {
 			maxFontPixels: 40,
-			innerTag: 'span'
+			innerTag: 'span',
+			widthOnly: false
 		};
 		var Opts = jQuery.extend(defaults, options);
 		return this.each(function() {
-			var fontSize = Opts.maxFontPixels;
-			var ourText = $(Opts.innerTag + ':visible:first', this);
-			var maxHeight = $(this).height();
-			var maxWidth = $(this).width();
-			var textHeight;
-			var textWidth;
-			do {
-				ourText.css('font-size', fontSize);
-				textHeight = ourText.height();
-				textWidth = ourText.width();
-				fontSize = fontSize - 1;
-			} while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
+			$(this).children(Opts.innerTag).each(function(index) {
+        	var fontSize = Opts.maxFontPixels;
+        	var maxHeight = $(this).parent().height();
+    			var maxWidth = $(this).parent().width();
+    			var textHeight;
+    			var textWidth;
+    			if(Opts.widthOnly) {
+    			  	do {
+        				$(this).css('font-size', fontSize);
+        				textWidth = $(this).width();
+        				fontSize = fontSize - 1;
+        				console.log(fontSize);
+        			} while (textWidth > maxWidth && fontSize > 3);
+  			  }
+  			  else {
+  			    	do {
+        				$(this).css('font-size', fontSize);
+        				textHeight = $(this).height();
+        				textWidth = $(this).width();
+        				fontSize = fontSize - 1;
+        			} while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
+			    }
+		  });
 		});
 	};
 })(jQuery);
