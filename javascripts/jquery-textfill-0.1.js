@@ -21,7 +21,6 @@
         				$(this).css('font-size', fontSize);
         				textWidth = $(this).width();
         				fontSize = fontSize - 1;
-        				console.log(fontSize);
         			} while (textWidth > maxWidth && fontSize > 3);
   			  }
   			  else {
