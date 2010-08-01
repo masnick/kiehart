@@ -17,10 +17,18 @@
 	<script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="javascripts/jquery-textfill-0.1.js"></script>
 	
+	
 	<script type="text/javascript">
-	$(document).ready(function() {
+	Typekit.load({
+		loading: function(data) {},
+		active: function() {
 		$('#title-wrap').textfill({ maxFontPixels: 100, innerTag: 'div' });
 		$('#menu').textfill({ maxFontPixels: 200, innerTag: 'span', widthOnly: true });
+		},
+		inactive: function() {
+		$('#title-wrap').textfill({ maxFontPixels: 100, innerTag: 'div' });
+		$('#menu').textfill({ maxFontPixels: 200, innerTag: 'span', widthOnly: true });
+		}
 	});
 	
 	</script>
