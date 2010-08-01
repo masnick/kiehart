@@ -7,13 +7,30 @@
 
 	<title>Pete Kiehart NYC</title>
 	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Typekit -->
 	<script type="text/javascript" src="http://use.typekit.com/mgi1kds.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	<!-- jquery -->
+	<script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery-textfill-0.1.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#title').textfill({ maxFontPixels: 100, innerTag: 'span' });
+	});
+	
+	</script>
 	
 </head>
 
 <body>
-<h1 class="f">Testing the font</h1>
+<div id="wrap">
+	<h1 style="display: none;">Pete Kiehart, NYC</h1>
+	<div id="title" class="f"><span>PETEKIEHARTNCY</span></div>	
+</div>
 
 </body>
 </html>

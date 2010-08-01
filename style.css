@@ -1,0 +1,16 @@
+body {
+ background-color: #ccc; 
+}
+
+#wrap {
+ width: 940px;
+ margin: 0 auto;
+}
+
+#title {
+ text-align: right;
+ height: 100px;
+}
+#title span {
+ color: #bbb; 
+}
