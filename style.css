@@ -20,5 +20,17 @@ body {
 }
 
 #menu {
- width: 300px; 
+ width: 100px;
 }
+#menu span {
+ line-height: 100%; 
+}
+
+.c1 a { color: #000; }
+.c2 a { color: #999; }
+.c3 a { color: #bbb; }
+.c4 a { color: #444; }
+
+#menu a:link { text-decoration: none; }
+#menu a:visited { text-decoration: none; }
+#menu a:hover { text-decoration: none; }
