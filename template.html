@@ -19,7 +19,7 @@
 	
 	<script type="text/javascript">
 	$(document).ready(function() {
-		$('#title').textfill({ maxFontPixels: 100, innerTag: 'span' });
+		$('#title-wrap').textfill({ maxFontPixels: 100, innerTag: 'div' });
 	});
 	
 	</script>
@@ -28,8 +28,10 @@
 
 <body>
 <div id="wrap">
-	<h1 style="display: none;">Pete Kiehart, NYC</h1>
-	<div id="title" class="f"><span>PETEKIEHARTNCY</span></div>	
+	<div id="title-wrap">
+		<h1 style="display: none;">Pete Kiehart, NYC</h1>
+		<div id="title" class="f">PETEKIEHART<span>NCY</span></div>	
+	</div>
 </div>
 
 </body>

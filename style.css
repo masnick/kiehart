@@ -7,6 +7,10 @@ body {
  margin: 0 auto;
 }
 
+#title-wrap {
+  height: 100px; 
+}
+
 #title {
  text-align: right;
  height: 100px;
