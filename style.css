@@ -29,8 +29,9 @@ body {
 }
 
 #content {
- width: 820px;
- float: left; 
+ width: 810px;
+ float: left;
+ margin-left: 10px;
 }
 
 .c1 a { color: #000; }
