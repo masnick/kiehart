@@ -21,10 +21,16 @@ body {
 
 #menu {
  width: 120px;
+ float: left;
  text-transform: uppercase;
 }
 #menu span {
  line-height: 80%; 
+}
+
+#content {
+ width: 820px;
+ float: left; 
 }
 
 .c1 a { color: #000; }
