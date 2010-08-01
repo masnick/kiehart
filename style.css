@@ -18,3 +18,7 @@ body {
 #title span {
  color: #bbb; 
 }
+
+#menu {
+ width: 300px; 
+}
