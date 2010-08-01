@@ -21,6 +21,7 @@ body {
 
 #menu {
  width: 100px;
+ text-transform: uppercase;
 }
 #menu span {
  line-height: 100%; 
